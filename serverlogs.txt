@@ -1,0 +1,19 @@
+18-Oct-22 00:23:17 - Connected to remote server...
+18-Oct-22 00:23:56 - who
+18-Oct-22 00:23:56 - output:
+sundar   tty7         2022-10-17 14:35 (:0)
+18-Oct-22 00:24:39 - pwd
+18-Oct-22 00:24:39 - output:
+/home/sundar/Code/Socket
+18-Oct-22 00:25:04 - touch created_from_server
+18-Oct-22 00:25:04 - output:
+
+18-Oct-22 00:26:54 - Connected to remote server...
+18-Oct-22 00:29:05 - python --version
+18-Oct-22 00:29:05 - output:
+Python 3.10.6
+18-Oct-22 00:29:16 - free -h
+18-Oct-22 00:29:16 - output:
+               total        used        free      shared  buff/cache   available
+Mem:           7.7Gi       4.7Gi       246Mi       406Mi       2.7Gi       2.3Gi
+Swap:          2.0Gi        41Mi       2.0Gi

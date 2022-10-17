@@ -2,6 +2,9 @@ import socket
 import subprocess
 import logging
 
+logging.basicConfig(filename='clientlogs.txt', filemode='a', \
+    format='%(asctime)s - %(message)s', datefmt='%d-%b-%y %H:%M:%S', level=logging.DEBUG)
+
 # Create socket with socket class.
 slave = socket.socket()
  
@@ -12,17 +15,17 @@ host = input("Server IP: ")
 # machine listens.
 port = int(input("Server PORT: "))
 
-file = "logfile.txt"
-
 # connect to the master machine with connect
 # command.
 try:
     slave.connect((host, port))
     print("Connected to the Server...")
+    logging.info(f"Connected to {host}:{port}")
     print("Commands executed by server...")
 except Exception as e:
-    print("Unable to connect", e)    
- 
+    print("Unable to connect", e)
+    logging.error('Unable to connect', e)
+
 while True:
     # receive the command from the master machine.
     # recv 1024 bytes from the master machine.
@@ -43,9 +46,12 @@ while True:
     # the master machine.
     slave.send(output.encode())
 
-    with open(file, 'a') as f:
-        f.write(command)
-        f.write("\n")        
+    logging.info(command)
+    logging.info(output)
+    # f.write(content)
+    # f.write("\n")
+    # f.write(output_content)
+    # f.write("\n")
 
 # close method closes the connection.
 slave.close()

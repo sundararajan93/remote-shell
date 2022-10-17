@@ -1,11 +1,15 @@
 import socket
- 
+
 # Create socket with socket class.
 master = socket.socket()
  
 # Host is the IP address of master
 # machine.
 host = "0.0.0.0"
+import logging
+
+logging.basicConfig(filename='serverlogs.txt', filemode='a', \
+    format='%(asctime)s - %(message)s', datefmt='%d-%b-%y %H:%M:%S', level=logging.DEBUG)
  
 # This will be the port that the
 # socket is bind.
@@ -21,8 +25,14 @@ master.listen(1)
  
 # This method accept socket connection
 # from the slave machine
-slave, address = master.accept()
- 
+try:
+    slave, address = master.accept()
+    print("Connected to remote server")
+    logging.info("Connected to remote server...")
+except Exception as e:
+    print("Unable to connect to remote machine", e)
+    logging.info("Unable to connect to remote machine", e)
+
 # When the slave is accepted, we can send
 # and receive data in real time
 while True:
@@ -45,6 +55,8 @@ while True:
     # received from the sender.
     output = slave.recv(5000)
     print(output.decode())
+    logging.info(command)
+    logging.info(output.decode())
  
 # close method closes the socket connection between
 # master and slave.
