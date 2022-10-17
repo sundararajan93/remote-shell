@@ -1,19 +1,17 @@
-18-Oct-22 00:23:17 - Connected to remote server...
-18-Oct-22 00:23:56 - who
-18-Oct-22 00:23:56 - output:
-sundar   tty7         2022-10-17 14:35 (:0)
-18-Oct-22 00:24:39 - pwd
-18-Oct-22 00:24:39 - output:
-/home/sundar/Code/Socket
-18-Oct-22 00:25:04 - touch created_from_server
-18-Oct-22 00:25:04 - output:
+18-Oct-22 01:23:32 - Connected to remote server...
+18-Oct-22 01:23:39 - lsb_release -a
+18-Oct-22 01:23:39 - output:
+No LSB modules are available.
+Distributor ID:	Debian
+Description:	Debian GNU/Linux 11 (bullseye)
+Release:	11
+Codename:	bullseye
+18-Oct-22 01:24:19 - uname -a
+18-Oct-22 01:24:19 - output:
+Linux debian 5.10.0-18-amd64 #1 SMP Debian 5.10.140-1 (2022-09-02) x86_64 GNU/Linux
+18-Oct-22 01:24:23 - who
+18-Oct-22 01:24:23 - output:
 
-18-Oct-22 00:26:54 - Connected to remote server...
-18-Oct-22 00:29:05 - python --version
-18-Oct-22 00:29:05 - output:
-Python 3.10.6
-18-Oct-22 00:29:16 - free -h
-18-Oct-22 00:29:16 - output:
-               total        used        free      shared  buff/cache   available
-Mem:           7.7Gi       4.7Gi       246Mi       406Mi       2.7Gi       2.3Gi
-Swap:          2.0Gi        41Mi       2.0Gi
+18-Oct-22 01:24:27 - whoami
+18-Oct-22 01:24:27 - output:
+linux
